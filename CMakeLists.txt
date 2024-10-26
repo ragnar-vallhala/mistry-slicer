@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Set the project name
-project(RobogenSlicer)
+project(mistry-slicer)
 
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -35,27 +35,4 @@ endif()
 
 # Create the library
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
-
-# # Add the executable
-# add_executable(${PROJECT_NAME} ${SOURCES})
-
-# # Specify output directory for the executable
-# set_target_properties(${PROJECT_NAME} PROPERTIES
-#     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build/bin
-# )
-
-# # Optionally, set the output name (useful if you want a specific name)
-# set_target_properties(${PROJECT_NAME} PROPERTIES
-#     OUTPUT_NAME "run"
-# )
-
-# # Add a custom clean target
-# add_custom_target(clean-all
-#     COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_CURRENT_SOURCE_DIR}/bin
-#     COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_CURRENT_BINARY_DIR}
-#     COMMENT "Cleaning up build files..."
-# )
-
-# Optionally, you can create a shared library as follows:
-# add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
